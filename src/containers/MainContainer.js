@@ -10,7 +10,7 @@ export default class MainContainer extends React.Component {
   }
 
   componentDidMount() {
-    fetch("http://localhost:3000/cards")
+    fetch("https://track-it-seven.vercel.app/cards")
       .then(resp => resp.json())
       .then(cards => {
         this.setState({
@@ -20,7 +20,7 @@ export default class MainContainer extends React.Component {
   }
 
   createNewCard = (input) => {
-    fetch("http://localhost:3000/cards", {
+    fetch("https://track-it-seven.vercel.app/cards", {
       method: "POST",
       headers: {
         'Content-Type': 'application/json',
@@ -39,7 +39,7 @@ export default class MainContainer extends React.Component {
   }
 
   addList = (cardId, input) => {
-    fetch("http://localhost:3000/lists", {
+    fetch("https://track-it-seven.vercel.app/lists", {
       method: "POST",
       headers: {
         'Content-Type': 'application/json',
