@@ -84,7 +84,7 @@ export default class MainContainer extends React.Component {
       newState = true
     }
 
-    fetch(`http://localhost:3000/lists/${listId}`, {
+    fetch(`https://track-it-seven.vercel.app/lists/${listId}`, {
       method: "PATCH",
       headers: {
         'Content-Type': 'application/json',
